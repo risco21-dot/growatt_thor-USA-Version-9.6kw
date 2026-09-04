@@ -248,29 +248,19 @@ async def async_setup_entry(hass, entry, async_add_entities):
             # ── Cumulatief totaal (Energy Dashboard) ──
             TotalEnergyChargedSensor(coordinator, entry),
 
-            # ── Fase-specifiek (diagnostics tijdens laden) ──
+            # ── US 240 V charger circuit diagnostics ──
             CurrentSensor(coordinator, entry, "L1"),
-            CurrentSensor(coordinator, entry, "L2"),
-            CurrentSensor(coordinator, entry, "L3"),
-
             VoltageSensor(coordinator, entry, "L1"),
-            VoltageSensor(coordinator, entry, "L2"),
-            VoltageSensor(coordinator, entry, "L3"),
-
             PhasePowerSensor(coordinator, entry, "L1"),
-            PhasePowerSensor(coordinator, entry, "L2"),
-            PhasePowerSensor(coordinator, entry, "L3"),
 
             TemperatureSensor(coordinator, entry),
 
-            # ── Load Balancing Grid sensors ───────────
+            # ── US split-phase grid / external meter ──
             GridPowerSensor(coordinator, entry),
             GridVoltageSensor(coordinator, entry, "L1"),
             GridVoltageSensor(coordinator, entry, "L2"),
-            GridVoltageSensor(coordinator, entry, "L3"),
             GridCurrentSensor(coordinator, entry, "L1"),
             GridCurrentSensor(coordinator, entry, "L2"),
-            GridCurrentSensor(coordinator, entry, "L3"),
 
             # ── Elektricteitstarief ───────────────────
             ElectricityPriceSensor(coordinator, entry),
