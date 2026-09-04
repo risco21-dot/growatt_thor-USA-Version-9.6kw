@@ -53,7 +53,7 @@ class MaxCurrentNumber(BaseConfigNumber):
     _attr_name = "Max Current"
     _attr_icon = "mdi:current-ac"
     _attr_native_min_value = 6
-    _attr_native_max_value = 32
+    _attr_native_max_value = 40
     _attr_native_step = 1
     _attr_native_unit_of_measurement = "A"
     _config_key = "G_MaxCurrent"
@@ -291,4 +291,3 @@ class ElectricityPriceNumber(BaseConfigNumber):
             _LOGGER.error("❌ Failed to set Elektricteitstarief: %s", exc, exc_info=True)
             if previous is not None:
                 self.coordinator.electricity_price = previous
-                self.coordinator.async_set_updated_data(True)
