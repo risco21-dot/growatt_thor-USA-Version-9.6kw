@@ -1,13 +1,13 @@
 {
   "domain": "growatt_thor",
-  "name": "Growatt THOR EV Charger",
-  "codeowners": ["@bobbesnl"],
+  "name": "Growatt THOR US 9.6 kW",
+  "codeowners": ["@bobbesnl", "@risco21-dot"],
   "config_flow": true,
-  "documentation": "https://github.com/bobbesnl/growatt_thor",
+  "documentation": "https://github.com/risco21-dot/growatt_thor-USA-Version-9.6kw",
   "integration_type": "device",
   "iot_class": "local_push",
-  "issue_tracker": "https://github.com/bobbesnl/growatt_thor/issues",
+  "issue_tracker": "https://github.com/risco21-dot/growatt_thor-USA-Version-9.6kw/issues",
   "loggers": ["custom_components.growatt_thor"],
   "requirements": ["ocpp>=2.0.0"],
-  "version": "1.6.0"
+  "version": "1.6.1-us.1"
 }
